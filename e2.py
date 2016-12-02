@@ -19,7 +19,7 @@ elec = y[1::2]
 num = 0 
 for i in elec:
     addr = "http://historical.elections.virginia.gov/elections/download/{}/precincts_include:0/".format(i)
-    resp = requests.get(addr)
+    resp = requests.get(addr) ### What is requests? you did not import it
     #write them into a file
     file_name = str(year[num])+".csv"
     num += 1 

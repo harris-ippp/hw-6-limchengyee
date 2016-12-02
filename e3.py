@@ -18,7 +18,7 @@ for line in open("ELECTION_ID", "r"):
 year = y[::2]
 elec = y[1::2] 
 
-path =r'C:\cygwin64\home\Lim Cheng Yee\hw-6-limchengyee' # use your path
+path =r'.' # use your path
 allFiles = glob.glob(path + "/*.csv")
 frame = pd.DataFrame()
 list_ = []
@@ -34,4 +34,7 @@ for year in range(1924,2013,4):
         df.dropna(inplace = True, axis = 1)    # drop empty columns
         list_.append(df)
         df["Year"]=year
+### Code breaks at this line
 frame = pd.concat(list_, ignore_index=True)
+
+### plotting?
